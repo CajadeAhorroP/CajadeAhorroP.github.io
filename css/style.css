@@ -1,0 +1,1085 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #08205a; /* Suave gris para contraste */
+    font-size: 18px; /* Aumenta el tamaño de fuente general */
+    box-sizing: border-box; /* Asegura que el padding no desborde los elementos */
+}
+
+/* Estilo para las flechas del carrusel */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff; /* Cambia el color por el que desees */
+    width: 40px; /* Ancho */
+    height: 40px; /* Alto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto hover para las flechas */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* Si necesitas posicionarlas mejor, puedes ajustar con margen */
+.swiper-button-next {
+    right: 10px; /* Ajusta la distancia del borde derecho */
+}
+
+.swiper-button-prev {
+    left: 10px; /* Ajusta la distancia del borde izquierdo */
+}
+
+/* Estilo para los círculos de paginación */
+.swiper-pagination-bullet {
+    background-color: #cccccc; /* Color base de los círculos */
+    width: 12px; /* Tamaño del círculo */
+    height: 12px;
+    margin: 0 6px; /* Espaciado entre los círculos */
+    opacity: 1; /* Asegúrate de que sean completamente visibles */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilo para el círculo activo */
+.swiper-pagination-bullet-active {
+    background-color: #0056b3; /* Color del círculo activo */
+    transform: scale(1.2); /* Aumenta el tamaño del círculo activo */
+}
+
+/* Efecto hover para los círculos */
+.swiper-pagination-bullet:hover {
+    background-color: #007bff; /* Cambia el color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para aplicar un modelo de caja consistente */
+}
+
+.header-formal {
+    background-color: #086408; /* Verde atractivo */
+    color: white;
+    border-bottom: 4px solid #087A08; /* Verde oscuro para contraste */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px; /* Máximo ancho */
+    width: 100%; /* Ocupará el ancho completo si la pantalla es menor */
+    margin: 0 auto; /* Centra el contenedor */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Modelo de caja consistente */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+.logo-container .logo {
+    width: 100px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    padding-top: 10px;
+}
+
+.logo-container .logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1); /* Mejora de visibilidad al pasar el mouse */
+}
+
+/* Menú */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Aumento en el espacio entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el botón hamburguesa */
+.hamburguesa {
+    display: none; /* Oculto por defecto */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .linea {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #333;
+    transition: all 0.3s;
+  }
+  
+  /* Estilos del menú */
+  .menu {
+    display: flex; /* Mostrar el menú en línea por defecto */
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 0 15px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Aumenta el tamaño de la fuente de los enlaces */
+    font-weight: 700; /* Más destacadas */
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #98FF98; /* Verde claro suave */
+    transform: translateY(-2px); /* Efecto flotante */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #98FF98;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Redes sociales */
+.socials {
+    display: flex;
+    gap: 30px; /* Aumento en el espacio entre los iconos */
+    justify-content: end;
+}
+
+.social-link img {
+    width: 45px; /* Incremento de tamaño */
+    height: 45px;
+    border-radius: 50%;
+    transition: transform 0.1s ease, filter 0.1s ease, box-shadow 0.1s ease, border 0.1s ease;
+    filter: brightness(0.80); /* Ajuste del brillo */
+}
+
+.social-link img:hover {
+    transform: scale(1.2);
+    filter: brightness(1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border:  solid #ffffff;
+}
+
+/* Sección footer */
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .links h4 {
+    font-size: 20px; /* Aumento en el tamaño del encabezado */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.footer .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .links li {
+    margin-bottom: 10px; /* Aumento en el espacio entre los elementos */
+}
+
+.footer .links a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 16px; /* Aumento en el tamaño de los enlaces */
+    transition: color 0.3s ease;
+}
+
+.footer .links a:hover {
+    color: #98FF98; /* Verde suave */
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+}
+
+.slider-txt {
+    margin-left: 85px;
+    width: 50%;
+}
+
+.slider-txt h1 {
+    font-size: 70px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.slider-txt p {
+    font-size: 18px;
+    color: #A7A7A7;
+}
+
+.slider-img {
+    width: 50%;
+}
+
+.slider-img img {
+    margin-right: 20px; /* Reduce el margen para mejorar el diseño */
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    max-width: 550px; /* Limita el tamaño máximo a 550px */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Contenedor principal de la sección */
+.productos-servicios {
+    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Fondo dinámico y elegante */
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+    padding-block: 10%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mejor alineación */
+    gap: 20px;
+    z-index: 1;
+}
+
+/* Fondo animado */
+.productos-servicios::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1), transparent);
+    animation: pulseBackground 6s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes pulseBackground {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+}
+
+/* Título de la sección */
+.productos-servicios h4 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #0056b3;
+    text-shadow: 0px 4px 12px rgba(0, 123, 255, 0.4);
+    position: relative;
+    animation: slideIn 1s ease-out;
+}
+
+.productos-servicios h4::after {
+    content: "";
+    width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, #0056b3, #00d4ff);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Contenedor de productos */
+.productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1300px;
+    width: 100%;
+}
+
+/* Estilo de cada producto */
+.producto {
+    background: #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    min-width: 280px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    z-index: 1;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Efecto hover en el contenedor */
+.producto:hover {
+    transform: translateY(-20px) rotate(3deg);
+    box-shadow: 0 25px 70px rgba(0, 123, 255, 0.2);
+    border-color: #00d4ff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Imagen de cada producto */
+.producto img {
+    max-width: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease;
+    filter: grayscale(80%);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto:hover img {
+    transform: scale(1.1) rotate(10deg);
+    filter: grayscale(0%);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.2);
+}
+
+/* Nombre de cada producto */
+.producto p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 20px;
+    text-transform: capitalize;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.producto:hover p {
+    color: #00d4ff;
+}
+
+/* Decoración flotante */
+.producto::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.2), transparent);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.producto:hover::before {
+    transform: scale(1);
+}
+
+/* MEDIA QUERIES PARA RESPUESTA EN PANTALLAS MÁS PEQUEÑAS */
+
+/* Pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+    .productos-servicios h4 {
+        font-size: 3rem;
+    }
+
+    .productos {
+        gap: 30px;
+    }
+
+    .producto {
+        flex: 1 1 calc(50% - 30px);
+        max-width: calc(50% - 30px);
+    }
+}
+
+/* Pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .productos-servicios {
+        padding-block: 8%;
+    }
+
+    .productos-servicios h4 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    .productos {
+        gap: 20px;
+    }
+
+    .producto {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+
+    .producto img {
+        max-width: 100px;
+    }
+}
+
+/* Pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .productos-servicios {
+        padding-block: 6%;
+    }
+
+    .productos-servicios h4 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .producto {
+        flex: 1 1 calc(100% - 20px);
+        max-width: calc(100% - 20px);
+    }
+
+    .producto p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Estilos generales de la sección de objetivos */
+.seccion-objetivos {
+    background-color: #ffff80; /* Fondo amarillo */
+    position: relative; /* Necesario para colocar la imagen */
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
+/* Imagen como marca de agua */
+.seccion-objetivos::before {
+    content: "";
+    background-image: url('/assets/img/POLI-NUEVI.png'); /* Imagen como marca de agua */
+    background-size: contain; /* Ajusta el tamaño para que no se deforme */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05; /* Sutil opacidad para una marca de agua casi invisible */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* La imagen queda detrás del contenido */
+    pointer-events: none; /* La marca de agua no interfiere con los elementos interactivos */
+    animation: fadeInOut 12s infinite ease-in-out, smoothMovement 20s infinite cubic-bezier(0.42, 0, 0.58, 1);
+    transition: opacity 2s ease-in-out, transform 5s ease-in-out;
+}
+
+/* Animación de desvanecimiento suave y elegante */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.05; /* Empieza muy tenue y desaparece al final */
+    }
+    25% {
+        opacity: 0.15; /* Aumenta la visibilidad de forma gradual */
+    }
+    50% {
+        opacity: 0.3; /* Se vuelve más visible en el medio de la animación */
+    }
+    75% {
+        opacity: 0.15; /* Desciende la visibilidad de nuevo */
+    }
+}
+
+/* Movimiento suave y elegante para la marca de agua */
+@keyframes smoothMovement {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg); /* Empieza centrado */
+    }
+    5% {
+        transform: translate(2%, -2%) rotate(1deg); /* Primer movimiento sutil */
+    }
+    20% {
+        transform: translate(-2%, 2%) rotate(-2deg); /* Movimiento lateral suave */
+    }
+    50% {
+        transform: translate(0%, 0%) rotate(6deg); /* Vuelve a la posición inicial */
+    }
+    70% {
+        transform: translate(2%, -2%) rotate(-4deg); /* Movimiento ligero en diagonal */
+    }
+    90% {
+        transform: translate(-1%, 1%) rotate(3deg); /* Movimiento suave con leve rotación */
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(0deg); /* Vuelve a la posición original */
+    }
+}
+
+/* Contenedor de contenido */
+.contenedor-objetivos {
+    position: relative; /* Eleva el contenido por encima de la imagen */
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Estilo del título de la sección */
+.titulo-objetivos {
+    font-size: 48px; /* Aumenté el tamaño para hacerlo más destacado */
+    font-weight: 900; /* Usé un peso de fuente más fuerte para darle más impacto */
+    color: #2a2a2a; /* Azul oscuro */
+    margin-bottom: 40px; /* Aumenté el margen para una separación más adecuada */
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Aumenté el espaciado de las letras para un estilo más elegante */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Añadí sombra sutil para darle profundidad */
+    transition: color 0.3s ease, transform 0.3s ease; /* Añadí una transición suave para color y movimiento */
+}
+
+/* Efecto de hover en el título */
+.titulo-objetivos:hover {
+    color: #08205a; /* Cambia a un azul más brillante al hacer hover */
+    transform: translateY(-5px); /* Sutil desplazamiento hacia arriba al hacer hover */
+}
+
+
+/* Estilos de la lista de objetivos */
+.lista-objetivos {
+    list-style: none; /* Quitar el estilo de lista predeterminado */
+    padding-left: 20px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.lista-objetivos li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.lista-objetivos li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #08205a; 
+    font-size: 22px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .titulo-objetivos {
+        font-size: 28px;
+    }
+
+    .contenedor-objetivos {
+        padding: 20px;
+    }
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Sección principal */
+#nuestrosvalores {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #f4f6f9, #eaeef3); /* Degradado suave */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título de sección */
+.titulo-seccion {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    animation: fadeInDown 1s ease;
+}
+
+/* Decoración dinámica del título */
+.titulo-seccion::before,
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+}
+
+.titulo-seccion::before {
+    left: -60px;
+}
+
+.titulo-seccion::after {
+    right: -60px;
+}
+
+.titulo-seccion span {
+    color: #00aaff; /* Resalta una parte del título si es necesario */
+}
+
+/* Efecto hover en el título */
+.titulo-seccion:hover::before,
+.titulo-seccion:hover::after {
+    width: 80px;
+    transition: width 0.4s ease;
+}
+
+/* Animación */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor de valores */
+.planes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Variables de colores y transiciones */
+:root {
+    --color-primario: #08205a;
+    --color-texto-principal: #333333;
+    --color-texto-secundario: #555555;
+    --color-fondo: #ffffff;
+    --sombra-normal: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    --transicion-rapida: 0.4s ease;
+    --transicion-lenta: 0.6s ease;
+}
+
+/* Tarjeta de cada valor */
+.plan {
+    background: var(--color-fondo);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-normal);
+    max-width: 280px;
+    text-align: justify;
+    transition: transform var(--transicion-rapida), box-shadow var(--transicion-rapida);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    opacity: 0; /* Animación inicial */
+    transform: translateY(20px);
+    transition: opacity var(--transicion-lenta), transform var(--transicion-lenta);
+}
+
+.plan.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.plan:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--sombra-hover);
+}
+
+.plan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-primario), var(--color-primario));
+    transition: left var(--transicion-rapida);
+}
+
+.plan:hover::before {
+    left: 0;
+}
+
+/* Iconos */
+.icono {
+    width: 90px;
+    margin-bottom: 20px;
+    transition: transform var(--transicion-rapida);
+}
+
+.plan:hover .icono {
+    transform: scale(1.1);
+}
+
+/* Títulos de valores */
+.titulo-plan {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* Detalles del valor */
+.lista-detalles p {
+    font-size: 1rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Animación del título */
+.titulo-seccion {
+    font-size: 2.8rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .titulo-seccion {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .planes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        max-width: 90%;
+    }
+
+    .titulo-seccion {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-seccion {
+        font-size: 2rem;
+    }
+
+    .plan {
+        padding: 20px;
+    }
+
+    .icono {
+        width: 70px;
+    }
+}
+
+
+.footer {
+    background: linear-gradient(135deg, #1f1f1f, #262626);
+    color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    border-top: 4px solid #98FF98;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-seccion h4 {
+    font-size: 26px;
+    color: #98FF98;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.footer-seccion p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #d3d3d3;
+}
+
+.footer-seccion.mapa iframe {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 280px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-seccion.mapa iframe:hover {
+    transform: scale(1.05);
+}
+
+.enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces li {
+    margin-bottom: 12px;
+}
+
+.enlaces li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #f4f4f4;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+.enlaces li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #98FF98;
+    transition: width 0.3s ease-in-out;
+}
+
+.enlaces li a:hover {
+    color: #ffffff;
+    transform: translateX(8px);
+}
+
+.enlaces li a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0d0d0d;
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #aaa;
+}
+
+.footer-bottom p a {
+    color: #98FF98;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom p a:hover {
+    color: #007BFF;
+}
+
+/* General styles for smaller screens */
+@media (max-width: 1175px) {
+    .navbar {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Menú de navegación oculto en pantallas pequeñas */
+    @media (max-width: 768px) {
+        .hamburguesa {
+            display: inline-block; /* Mostrar el botón hamburguesa */
+        }
+
+        .menu {
+            display: none; /* Ocultar el menú */
+            flex-direction: column;
+            position: absolute;
+            top: 150px;
+            right: 0;
+            width: 100%;
+            background-color: rgb(56, 52, 52);
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            padding: 10px 0;
+        }
+
+        .menu.active {
+            display: flex; /* Mostrar menú al activar */
+        }
+
+        .menu li {
+            margin: 10px 0; /* Espaciado entre elementos */
+            text-align: center;
+        }
+    }
+
+    /* Estilo cuando el menú se muestra */
+    .hamburguesa.active .linea:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .hamburguesa.active .linea:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguesa.active .linea:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    /* Mejoras en el footer */
+    .footer {
+        gap: 20px 50px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Styles for smaller screens (max-width: 1000px) */
+@media (max-width: 1000px) {
+    .footer-contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos {
+        flex-direction: column;
+    }
+
+    .slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px 50px;
+    }
+
+    .slider-txt {
+        margin: auto;
+    }
+
+    .slider-txt h1 {
+        font-size: 2.7rem;
+    }
+}
+
+/* Styles for very small screens (max-width: 600px) */
+@media (max-width: 600px) {
+    .header-formal {
+        position: static;
+    }
+
+    .navbar .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}
