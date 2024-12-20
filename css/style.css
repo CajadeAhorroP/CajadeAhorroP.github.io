@@ -508,7 +508,7 @@ body {
 
 /* Estilos generales de la sección de objetivos */
 .seccion-objetivos {
-    background-color: #ffff80; /* Fondo amarillo */
+    background-color: #1fca44; /* Fondo amarillo */
     position: relative; /* Necesario para colocar la imagen */
     padding: 60px 20px;
     text-align: center;
@@ -587,17 +587,17 @@ body {
 .titulo-objetivos {
     font-size: 48px; /* Aumenté el tamaño para hacerlo más destacado */
     font-weight: 900; /* Usé un peso de fuente más fuerte para darle más impacto */
-    color: #2a2a2a; /* Azul oscuro */
+    color: #ffffff; /* Azul oscuro */
     margin-bottom: 40px; /* Aumenté el margen para una separación más adecuada */
     text-transform: uppercase;
     letter-spacing: 4px; /* Aumenté el espaciado de las letras para un estilo más elegante */
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1); /* Añadí sombra sutil para darle profundidad */
-    transition: color 0.3s ease, transform 0.3s ease; /* Añadí una transición suave para color y movimiento */
+    transition: color 0.9s ease, transform 0.5s ease; /* Añadí una transición suave para color y movimiento */
 }
 
 /* Efecto de hover en el título */
 .titulo-objetivos:hover {
-    color: #08205a; /* Cambia a un azul más brillante al hacer hover */
+    color: #0d0e0d; /* Cambia a un azul más brillante al hacer hover */
     transform: translateY(-5px); /* Sutil desplazamiento hacia arriba al hacer hover */
 }
 
@@ -607,7 +607,7 @@ body {
     list-style: none; /* Quitar el estilo de lista predeterminado */
     padding-left: 20px;
     font-size: 18px;
-    color: #333;
+    color: #111010;
     line-height: 1.8;
     margin: 0;
 }
@@ -618,13 +618,27 @@ body {
     padding-left: 40px;
 }
 
-.lista-objetivos li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #08205a; 
-    font-size: 22px;
+/* Estilo para marcadores de la lista personalizada */
+.lista-objetivos {
+    position: relative; /* Asegura que los elementos hijos absolutos se alineen correctamente */
+    padding-left: 1.5em; /* Espacio reservado para los marcadores */
+}
+
+.lista-objetivos li {
+    position: relative; /* Necesario para el posicionamiento del pseudo-elemento ::before */
+    padding-left: 0.5em; /* Ajuste de espacio entre el marcador y el texto */
+}
+
+.lista-objetivos li::before {
+    content: "*"; /* Emoji como marcador */
+    position: absolute; /* Control preciso de la posición */
+    left: 0; /* Posicionamiento a la izquierda dentro del contenedor */
+    top: 50%; /* Centrado vertical dentro del elemento */
+    transform: translateY(-50%); /* Corrección para un centrado exacto */
+    color: white; /* Cambia el color del marcador a blanco */
+    font-size: 1.4em; /* Escalable según el tamaño del texto */
+    line-height: 1; /* Consistencia en el espaciado vertical */
+    font-weight: bold; /* Hace que el marcador destaque visualmente */
 }
 
 /* Responsivo */
